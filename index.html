@@ -41,70 +41,52 @@
       </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>      
     <div class="container">
-    <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Título" aria-label="título">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Descrição" aria-label="descrição">
-        </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="pts" aria-label="pontos">
-        </div>
-        <div class="col">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Categoria</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Cadastrar Tarefa
+      </button>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                    CBT
-                    </div>
-                    <div class="card-body">
-                    <p class="card-text"> Utilizarei técnicas de CBT (Cock 'n' Ball Torture)</p>
-                    <P>
-                        <span class="badge text-bg-dark">BBC</span>
-                    </P>
-                    <a href="#" class="btn btn-success">
-                        <i class="bi bi-check2-square"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <i class="bi bi-check2-square"></i>
-                    </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <div class="card-header">
-                HAHAAHA
-                </div>
-                <div class="card-body">
-                <p class="card-text"> CORINGA</p>
-                <P>
-                    <span class="badge text-bg-success">JOKER</span>
-                </P>
-                <a href="#" class="btn btn-success">
-                    <i class="bi bi-check2-square"></i>
-                </a>
-                <a href="#" class="btn btn-danger">
-                    <i class="bi bi-check2-square"></i>
-                </a>
-                </div>
-                </div>
-            </div>
+        <div id="tarefas" class="row">
         </div>
     </div>
-</body>
+
+    <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Tarefa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <input id="titulo" type="text" class="form-control" placeholder="Título" aria-label="título">
+          </div>
+          <div class="col-12">
+              <input id="descricao" type="text" class="form-control" placeholder="Descrição" aria-label="descrição">
+          </div>
+          <div class="col-6">
+              <input id="pontos" type="text" class="form-control" placeholder="pts" aria-label="pontos">
+          </div>
+          <div class="col-6">
+              <select id="categoria" class="form-select" aria-label="Default select example">
+                  <option selected>Categoria</option>
+                  <option value="Estudar Roberto Carlos">Estudar Roberto Carlos</option>
+                  <option value="Estudar para o CCNA">Estudar para o CCNA</option>
+                  <option value="Não aguento mais">Não aguento mais</option>
+                </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<script src="./crud.js"></script>
+  </body>
 </html>
