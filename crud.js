@@ -6,10 +6,10 @@ function cadastrar() {
     let categoria = document.querySelector("#categoria").value
     
     const tarefa = {
-        titulo: titulo,
-        descricao: descricao,
-        pontos: pontos,
-        categoria: categoria
+        titulo,
+        descricao,
+        pontos,
+        categoria
     }
 
     document.querySelector("#tarefas").innerHTML += gerarCard(tarefa)
@@ -17,7 +17,8 @@ function cadastrar() {
 }
 
 function gerarCard(tarefa){
-    return `<div class="col">
+    return `
+    <div class="col-12 col-md-6 col-lg-3">
     <div class="card">
         <div class="card-header">
         ${tarefa.titulo}
